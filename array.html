@@ -28,7 +28,14 @@
             </div>
 
             <div class="heart-section">
-                <img src="./assests/icons8-heart-24.png" alt="">
+                <svg onclick="heart()" id="dill" height="25px" width="25px" fill="currentColor" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 471.701 471.701" xml:space="preserve">
+                    <g>
+                        <path
+                            d="m 137.15625,1.9375 c -133.2055748,0.9945991 -253.01204,205.15765 86.1875,421.03125 5.56625,3.95044 11.16422,7.45178 16.78125,10.46875 2.08922,1.27549 4.15948,2.53646 6.28125,3.8125 0.23511,-0.10703 0.48361,-0.20367 0.71875,-0.3125 0.2286,0.10575 0.45893,0.20845 0.6875,0.3125 2.14873,-1.29226 4.25965,-2.58332 6.375,-3.875 5.58714,-3.00616 11.18204,-6.47677 16.71875,-10.40625 C 624.1983,198.12638 479.53398,-14.017525 340.4375,2.875 285.7815,9.5170163 259.63329,39.528091 247.125,65.71875 234.61769,39.526866 208.44086,9.5174556 153.78125,2.875 148.23281,2.2011719 142.69046,1.896178 137.15625,1.9375 z" />
+                    </g>
+                </svg>
                 <h2>93</h2>
             </div>
         </div>
@@ -44,7 +51,7 @@
 
             <div class="doller-2">
                 <h3>ACUTION ENDS</h3>
-                <h2>02:43:38s</h2>
+                <h2 id="times"></h2>
             </div>
 
         </div>
@@ -53,6 +60,26 @@
             <button>BID NOW</button>
         </div>
     </div>
+
+
+
+    <script>
+        let time = document.getElementById("times")
+        setInterval(() => {
+            time.innerHTML = new Date().toLocaleTimeString()
+        }, 1000)
+
+
+        function heart() {
+            let color = document.getElementById("dill")
+            if (color.style.color == "red") {
+                color.style.color = "currentColor"
+            } else
+                color.style.color = "red"
+
+
+        }
+    </script>
 </body>
 
 </html>

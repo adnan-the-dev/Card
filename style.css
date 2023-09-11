@@ -66,6 +66,7 @@ body {
 .heart-section {
     display: flex;
     align-items: center;
+    gap: 5px;
 
 }
 
